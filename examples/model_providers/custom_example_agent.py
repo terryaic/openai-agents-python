@@ -5,9 +5,9 @@ from openai import AsyncOpenAI
 
 from agents import Agent, OpenAIChatCompletionsModel, Runner, function_tool, set_tracing_disabled
 
-BASE_URL = os.getenv("EXAMPLE_BASE_URL") or ""
-API_KEY = os.getenv("EXAMPLE_API_KEY") or ""
-MODEL_NAME = os.getenv("EXAMPLE_MODEL_NAME") or ""
+BASE_URL = os.getenv("EXAMPLE_BASE_URL") or "http://192.168.1.14:8021/v1"
+API_KEY = os.getenv("EXAMPLE_API_KEY") or "test"
+MODEL_NAME = os.getenv("EXAMPLE_MODEL_NAME") or "Qwen2.5-Coder-32B-Instruct"
 
 if not BASE_URL or not API_KEY or not MODEL_NAME:
     raise ValueError(
