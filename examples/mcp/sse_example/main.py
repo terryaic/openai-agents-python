@@ -9,12 +9,14 @@ from agents import Agent, Runner, gen_trace_id, trace
 from agents.mcp import MCPServer, MCPServerSse
 from agents.model_settings import ModelSettings
 
+from agents import enable_verbose_stdout_logging
+enable_verbose_stdout_logging()
 
 from openai import AsyncOpenAI
 
 from agents import Agent, OpenAIChatCompletionsModel, Runner, function_tool, set_tracing_disabled
 
-BASE_URL = os.getenv("EXAMPLE_BASE_URL") or "http://192.168.1.14:8021/v1"
+BASE_URL = os.getenv("EXAMPLE_BASE_URL") or "http://office.appincloud.cn:8021/v1"
 API_KEY = os.getenv("EXAMPLE_API_KEY") or "test"
 MODEL_NAME = os.getenv("EXAMPLE_MODEL_NAME") or "Qwen2.5-Coder-32B-Instruct"
 
